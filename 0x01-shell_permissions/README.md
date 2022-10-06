@@ -5,3 +5,4 @@
 (6) write a script that adds execute permission to the owner of the file hello
 (7) write a script that adds execute permission to the owner and the group owner and read permission to other users, to the file hello
 (8) write a script that adds execution permission to the owner, the group owner and the other users for the file hello
+(9) write a script gives no permission to the owner, no permission to the group and all permission to other users to the file hello
