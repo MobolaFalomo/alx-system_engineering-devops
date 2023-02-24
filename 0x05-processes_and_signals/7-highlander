@@ -3,7 +3,8 @@
 # Requirement: In between each iteration of the loop, add a sleep 2
 
 trap 'echo "I am invincible!!!"' SIGTERM
-while true
+i=0
+while [$i]
 do
     echo "To infinity and beyond"
     sleep 2
