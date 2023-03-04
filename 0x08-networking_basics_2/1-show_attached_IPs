@@ -1,8 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
+# This script displays all acive IPv4 addresses on the machine.
 
-# Get all active IPv4 IPs
-ips=$(ip addr | grep 'inet ' | grep -v '127.0.0.1' | awk '{print $2}' | cut -d '/' -f 1)
-
-# Print the IPs
-echo "Active IPv4 IPs:"
-echo "$ips"
+ifconfig | grep -Eo "inet (addr:)?([0-9]*\.){3}[0-9]*" | cut -b 6-
