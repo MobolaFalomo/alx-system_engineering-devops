@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # A Bash script that Installs, configures, and starts the server
-apt update
-apt install -y nginx
+sudo apt update
+sudo apt install -y nginx
 sudo ufw allow 'Nginx HTTP'
 mkdir -p /var/www/html/
 sudo chmod -R 755 /var/www
@@ -16,8 +16,8 @@ SERVER_CONFIG=\
 	location / {
 		try_files \$uri \$uri/ =404;
 	}
-	if (\$request_filename ~ redirect_me){
-		rewrite ^ www.facebook.com permanent;
+	if (\$request_filename ~ /redirect_me){
+		rewrite ^ https://www.facebook.com/ permanent;
 	}
 }"
 
