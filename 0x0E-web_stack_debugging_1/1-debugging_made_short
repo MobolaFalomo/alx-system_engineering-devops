@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 # A script that says nginx is not running
-ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
-service nginx start
-pkill nginx
+cp -r /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+service nginx restart
+pkill -o nginx
