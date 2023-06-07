@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-"""Returns a list of all topics for all hot articles
-   for a given Reddit subreddit
+""" A recursive function that queries the Reddit API and returns a list of all 
+    titles for all hot articles for a given ubreddit
 """
 import requests
 
